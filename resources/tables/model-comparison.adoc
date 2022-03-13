@@ -1,3 +1,5 @@
+:fn-adc-tsvref-ch: footnote:adctsvrefch[additional 2 channels dedicated to Temperature Sensor and Vref]
+
 [%header]
 [cols="^1,^1,^1,^1,^1,^1"]
 |===
@@ -35,8 +37,8 @@
 4*| 1
 
 2.1+| ADC/Tkey Channels
-3*| 10
-| 16
+3*| 10 + 2{fn-adc-tsvref-ch}
+| 16 + 2{fn-adc-tsvref-ch}
 
 .4+.^| Interfaces
 | SPI
