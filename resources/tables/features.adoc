@@ -47,5 +47,5 @@
 * Packages
     - QFN48-7x7
     - LQFP48-7x7
-    - LQFP100-10x10
+    - LQFP64-10x10
 |===
