@@ -4,3 +4,4 @@
 :sectanchors:
 :icons: font
 :nofooter:
+:xrefstyle: short
