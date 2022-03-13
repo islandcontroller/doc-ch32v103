@@ -1,0 +1,2 @@
+== Features
+include::{tablesdir}/features.adoc[]

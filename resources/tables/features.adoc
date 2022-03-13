@@ -1,0 +1,51 @@
+[cols="1a,1a",frame=none,grid=none]
+|===
+|
+* WCH 32-bit RISC-V3A Core
+    - `RV32IMAC` base ISA and extensions
+    - 80MHz maximum operating frequency
+    - Low-power two-stage instruction pipeline w/ static branch prediction
+* Memory
+    - 32 or 64 KB of FLASH memory
+    - 10 or 20kB of SRAM
+    - 128B of non-volatile user configuration data
+* Low Power
+    - Sleep, Stop, Stand-by modes
+    - Battery-backed RTC and backup registers
+* Clock, Reset and Power Supply
+    - Operating supply range: 2.7 to 5.5V
+    - Factory-trimmed internal 8MHz RC oscillator
+    - Internal 40kHz RC oscillator
+    - PLL for system clock generation, up to 80MHz
+    - External 4-16MHz XTAL oscillator for system clock
+    - External 32.768kHz XTAL oscillator for RTC
+    - Power-on/Power-down reset (POR/PDR), Programmable Voltage Detector (PVD)
+* 12-bit 1&mu;s A/D Converter (up to 18 Channels)
+    - Conversion range: 0 to 5.5V
+    - Analog watchdog
+    - 10/16 external channels, 2 internal channels
+    - Temperature Sensor
+
+|
+* 10/16-channel TouchKey
+* 7-channel general purpose DMA controller
+    - Ring buffer mode
+    - Supported peripherals: timers, ADC, com. interfaces
+* Up to 7 timers
+    - 1 &times; 16-bit motor control timer with PWM outputs, dead time generation and emergency stop
+    - Up to 3 &times; 16-bit timers, each with up to 4 IC/OC/PWM outputs or pulse counter / quadrature encoder inputs
+    - 2 &times; watchdog timers (independent and window)
+    - SysTick timer: 64-bit up-counter
+* Up to 8 communication interfaces
+    - USB 2.0FS host/device interface
+    - Up to 2 &times; I&sup2;C interfaces (SMBus/PMBus)
+    - Up to 3 &times; USART (ISO7816 interface, LIN, IrDA, flow control)
+* Up to 51 fast I/O
+    - 37/51 fast GPIO, mappable to 16 interrupts
+* Debug mode: 2-wire serial debug interface (RVSWD)
+* CRC calculation unit, 96-bit unique device ID
+* Packages
+    - QFN48-7x7
+    - LQFP48-7x7
+    - LQFP100-10x10
+|===

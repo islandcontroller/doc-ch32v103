@@ -1,0 +1,9 @@
+== Description
+
+=== Device overview
+
+.Model Comparison
+include::{tablesdir}/model-comparison.adoc[]
+
+.System Block Diagram
+image::CH32V103_System_Diagram.svg[align=center]

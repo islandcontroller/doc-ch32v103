@@ -1,0 +1,6 @@
+:imagesdir: ../resources/img
+:tablesdir: ../resources/tables
+:toc: left
+:sectanchors:
+:icons: font
+:nofooter:
