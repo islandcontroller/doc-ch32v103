@@ -15,7 +15,7 @@ _Unofficial documentation resources for WCH's CH32V103 RISC-V microcontroller_
 | PDF
 
 | *Reference Manual*
-| `CH32V10xRM`
+| `CH32V103RM`
 | HTML
 | PDF
 |===
