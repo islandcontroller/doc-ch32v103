@@ -1,0 +1,21 @@
+include::./attrs.adoc[]
+
+= CH32V103: Documentation
+WCH; &commat;islandc&lowbar;;
+:revremark: development
+:revnumber: 0.1
+
+_Unofficial documentation resources for WCH's CH32V103 RISC-V microcontroller_
+
+[.center,cols="2,2,^1,^1",grid=rows,width=75]
+|===
+| *Datasheet*
+| `CH32V103DS`
+| link:datasheet/index.html[HTML]
+| PDF
+
+| *Reference Manual*
+| `CH32V10xRM`
+| HTML
+| PDF
+|===
