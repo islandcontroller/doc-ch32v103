@@ -60,11 +60,11 @@
 4.1+| 2.7 to 5.5V
 
 2.1+| Operating temperature
-4.1+| Industrial grade; -40 to +85&circ;C
+4.1+| Industrial grade; -40 to +85&deg;C
 
 2.1+| Package
-2.1+| LQFP48 (7x7)
-| QFN48 (7x7)
-| LQFP64M (10x10)
+2.1+| LQFP48 (7&times;7mm)
+| QFN48 (7&times;7mm)
+| LQFP64M (10&times;10mm)
 
 |===
