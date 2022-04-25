@@ -6,7 +6,7 @@
     - 80MHz maximum operating frequency
     - Low-power two-stage instruction pipeline w/ static branch prediction
 * Memory
-    - 32 or 64 KB of FLASH memory
+    - 32 or 64kB of FLASH memory
     - 10 or 20kB of SRAM
     - 128B of non-volatile user configuration data
 * Low Power
@@ -21,7 +21,7 @@
     - External 32.768kHz XTAL oscillator for RTC
     - Power-on/Power-down reset (POR/PDR), Programmable Voltage Detector (PVD)
 * 12-bit 1&mu;s A/D Converter (up to 18 Channels)
-    - Conversion range: 0 to 5.5V
+    - Conversion range: 0 to V~DDA~ (5.5V max.)
     - Analog watchdog
     - 10/16 external channels, 2 internal channels
     - Temperature Sensor
@@ -46,7 +46,7 @@
 * Debug mode: 2-wire serial debug interface (RVSWD)
 * CRC calculation unit, 96-bit unique device ID
 * Packages
-    - QFN48-7x7
-    - LQFP48-7x7
-    - LQFP64-10x10
+    - QFN48 (7&times;7mm)
+    - LQFP48 (7&times;7mm)
+    - LQFP64 (10&times;10mm)
 |===
