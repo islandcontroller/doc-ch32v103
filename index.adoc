@@ -1,12 +1,14 @@
-include::./attrs.adoc[]
-
 = CH32V103: Documentation
 WCH; &commat;islandc&lowbar;;
 :revremark: development
 :revnumber: 0.1
+:nofooter:
 
 _Unofficial documentation resources for WCH's CH32V103 RISC-V microcontroller_
 
+---
+
+.Documents 
 [.center,cols="2,2,^1,^1",grid=rows,width=75]
 |===
 | *Datasheet*
@@ -18,4 +20,16 @@ _Unofficial documentation resources for WCH's CH32V103 RISC-V microcontroller_
 | `CH32V103RM`
 | HTML
 | PDF
+|===
+
+.Other Resources
+[.center,cols="2,3,^1",grid=rows,width=75]
+|===
+| *Demo project*
+| `islandcontroller/hello-ch32v103`
+| link:https://github.com/islandcontroller/hello-ch32v103[GitHub]
+
+| *OpenWCH Eval Kit*
+| `openwch/ch32v103`
+| link:https://github.com/openwch/ch32v103[GitHub]
 |===
