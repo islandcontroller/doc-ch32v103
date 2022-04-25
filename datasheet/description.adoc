@@ -21,3 +21,34 @@ include::{tablesdir}/model-comparison.adoc[]
 [#system-diagram]
 .System Block Diagram
 image::CH32V103_System_Diagram.svg[align=center]
+
+=== Systems and features overview
+
+==== RISC-V3A core
+[.text-justify]
+The _RISC-V3A_ is a 32-bit RISC processor core developed and maintained in-house at WCH. It implements the `RV32I` _RISC-V_ base ISA with hardware multiplication and division (`M`), atomic memory access (`A`) and compressed instructions (`C`), as well as vendor-specific extensions. _Machine_ and _User_ privilege levels are supported. Debugging access is provided via a two-wire serial interface.
+
+* `RV32IMAC` base ISA and extensions
+* Low-power 2-stage pipeline with static branch prediction
+* Instruction pre-fetch buffer
+* _Machine_ and _User_ privilege levels
+* Programmable Fast Interrupt Controller (PFIC)
+* Two-wire serial debugging interface
+
+==== Embedded FLASH memory
+
+==== Embedded SRAM
+
+==== CRC calculation unit (CRC)
+
+==== Programmable Fast Interrupt Controller (PFIC)
+
+==== External Interrupt Controller (EXTI)
+
+==== Clocks
+
+==== Boot Modes
+
+==== Power supply and monitoring
+
+==== Low power
