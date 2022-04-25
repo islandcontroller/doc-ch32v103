@@ -1,6 +1,7 @@
 :imagesdir: ../resources/img
 :tablesdir: ../resources/tables
 :toc: left
+:toclevels: 4
 :sectanchors:
 :icons: font
 :nofooter:
