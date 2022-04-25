@@ -20,7 +20,7 @@
     - External 4-16MHz XTAL oscillator for system clock
     - External 32.768kHz XTAL oscillator for RTC
     - Power-on/Power-down reset (POR/PDR), Programmable Voltage Detector (PVD)
-* 12-bit 1&mu;s A/D Converter (up to 18 Channels)
+* 12-bit 1MSps A/D Converter (up to 18 Channels)
     - Conversion range: 0 to V~DDA~ (5.5V max.)
     - Analog watchdog
     - 10/16 external channels, 2 internal channels
