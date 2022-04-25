@@ -32,4 +32,7 @@ _Unofficial documentation resources for WCH's CH32V103 RISC-V microcontroller_
 | *OpenWCH Eval Kit*
 | `openwch/ch32v103`
 | link:https://github.com/openwch/ch32v103[GitHub]
+
+| *Community and support*
+2.1+| image:https://img.shields.io/badge/discord-WCH%20Community-white?style=flat-square&logo=discord[link="https://t.co/Qbblvmfbae"]
 |===
