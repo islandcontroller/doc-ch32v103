@@ -27,7 +27,7 @@
     - Temperature Sensor
 
 |
-* 10/16-channel TouchKey
+* 10/16-channel _TouchKey_ capacitive touch sensing peripheral
 * 7-channel general purpose DMA controller
     - Ring buffer mode
     - Supported peripherals: timers, ADC, com. interfaces
@@ -37,7 +37,7 @@
     - 2 &times; watchdog timers (independent and window)
     - SysTick timer: 64-bit up-counter
 * Up to 8 communication interfaces
-    - USB 2.0FS host/device interface
+    - USBHD 2.0FS host/device interface
     - Up to 2 &times; I&sup2;C interfaces (SMBus/PMBus)
     - Up to 2 &times; SPI (Master and Slave modes)
     - Up to 3 &times; USART (ISO 7816 interface, LIN, IrDA, flow control)
