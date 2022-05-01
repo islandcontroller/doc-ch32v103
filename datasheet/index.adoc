@@ -9,5 +9,8 @@ _RISC-V_-based 32-bit MCU with `RV32IMAC` core, 32 or 64kB FLASH, USBHD 2.0FS, 1
 
 ---
 
+[.text-right]
+link:../[Return to overview]
+
 include::features.adoc[]
 include::description.adoc[]
