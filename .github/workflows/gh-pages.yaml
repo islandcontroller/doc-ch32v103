@@ -3,8 +3,12 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
-    - main
+    - master
   workflow_dispatch:
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   deploy:
