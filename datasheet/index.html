@@ -461,8 +461,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_embedded_sram">Embedded SRAM</a></li>
 <li><a href="#_crc_calculation_unit_crc">CRC calculation unit (CRC)</a></li>
 <li><a href="#_programmable_fast_interrupt_controller_pfic">Programmable Fast Interrupt Controller (PFIC)</a></li>
-<li><a href="#_external_interrupt_controller_exti">External Interrupt Controller (EXTI)</a></li>
-<li><a href="#_clocks">Clocks</a></li>
+<li><a href="#_external_interruptevent_controller_exti">External Interrupt/Event Controller (EXTI)</a></li>
+<li><a href="#_clocks_and_startup">Clocks and Startup</a></li>
 <li><a href="#_boot_modes">Boot Modes</a></li>
 <li><a href="#_power_supply_and_monitoring">Power supply and monitoring</a></li>
 <li><a href="#_low_power">Low power</a></li>
@@ -470,6 +470,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><a href="#_pinouts_and_pin_description">Pinouts and Pin Description</a></li>
 </ul>
 </div>
 </div>
@@ -875,26 +876,55 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect3">
 <h4 id="_embedded_flash_memory"><a class="anchor" href="#_embedded_flash_memory"></a>Embedded FLASH memory</h4>
-
+<div class="paragraph text-justify">
+<p>Depending on model selection (see <a href="#model-comparison">Table 1</a>), either 32kB or 64kB of embedded FLASH memory are available for code and read-only data storage. Higher AHB clock speeds may require additional access wait-states.</p>
+</div>
+<div class="paragraph">
+<p>128 Bytes of persistent, application-defined data can be stored in a separate user configuratioin word.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_embedded_sram"><a class="anchor" href="#_embedded_sram"></a>Embedded SRAM</h4>
-
+<div class="paragraph text-justify">
+<p>Up to 20kB of embedded SRAM are available for data and code storage, and can be accessed (read/write) at AHB clock speed without wait-states. Available memory is limited on smaller devices, as shown in <a href="#model-comparison">Table 1</a>.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_crc_calculation_unit_crc"><a class="anchor" href="#_crc_calculation_unit_crc"></a>CRC calculation unit (CRC)</h4>
-
+<div class="paragraph text-justify">
+<p>The CRC unit can be used to calculate a CRC value from 32-bit data words and a fixed generator polynomial (CRC-32, <code>0x04C11DB7</code>). It can be utilised to verify the integrity of FLASH-memory contents against a known-good signature.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_programmable_fast_interrupt_controller_pfic"><a class="anchor" href="#_programmable_fast_interrupt_controller_pfic"></a>Programmable Fast Interrupt Controller (PFIC)</h4>
-
+<div class="paragraph text-justify">
+<p>Incoming peripheral and core interrupt requests are managed by the built-in programmable fast interrupt controller, capable of handling 47 maskable interrupt channels and 16 priority levels.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>44 peripheral + 3 core maskable interrupts</p>
+</li>
+<li>
+<p>Non-maskable core interrupt (NMI)</p>
+</li>
+<li>
+<p>Hardware stack management on interrupt entry and exit up to 2-level nesting</p>
+</li>
+<li>
+<p>Support for tail-chaining</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_external_interrupt_controller_exti"><a class="anchor" href="#_external_interrupt_controller_exti"></a>External Interrupt Controller (EXTI)</h4>
-
+<h4 id="_external_interruptevent_controller_exti"><a class="anchor" href="#_external_interruptevent_controller_exti"></a>External Interrupt/Event Controller (EXTI)</h4>
+<div class="paragraph text-justify">
+<p>The external interrupt/event controller contains 20 edge detectors for generating interrupt/event requests. Each interrupt can be masked and configured to select the trigger event independently. Interrupt requests are latched in a pending register. External request lines support pulse widths shorter than the APB2 clock period. Up to 51 general-purpose I/Os can be connected to the 16 external interrupt lines.</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_clocks"><a class="anchor" href="#_clocks"></a>Clocks</h4>
+<h4 id="_clocks_and_startup"><a class="anchor" href="#_clocks_and_startup"></a>Clocks and Startup</h4>
 
 </div>
 <div class="sect3">
@@ -909,6 +939,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_low_power"><a class="anchor" href="#_low_power"></a>Low power</h4>
 
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pinouts_and_pin_description"><a class="anchor" href="#_pinouts_and_pin_description"></a>Pinouts and Pin Description</h2>
+<div class="sectionbody">
+<div id="pinout-lqfp48" class="imageblock text-center">
+<div class="content">
+<img src="../resources/img/CH32V103_Pinout_LQFP48.svg" alt="CH32V103 Pinout LQFP48">
+</div>
+<div class="title">Figure 2. CH32V103CxT6 (LQFP48) pinout</div>
+</div>
+<div id="pinout-qfn48" class="imageblock text-center">
+<div class="content">
+<img src="../resources/img/CH32V103_Pinout_QFN48.svg" alt="CH32V103 Pinout QFN48">
+</div>
+<div class="title">Figure 3. CH32V103C8U6 (QFN48) pinout</div>
+</div>
+<div id="pinout-lqfp64" class="imageblock text-center">
+<div class="content">
+<img src="../resources/img/CH32V103_Pinout_LQFP64.svg" alt="CH32V103 Pinout LQFP64">
+</div>
+<div class="title">Figure 4. CH32V103R8T6 (LQFP64M) pinout</div>
 </div>
 </div>
 </div>
