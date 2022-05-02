@@ -21,7 +21,7 @@ jobs:
     - name: Build landing page
       uses: tonynv/asciidoctor-action@master
       with:
-        program: "asciidoctor -b html5 outputs index.adoc"
+        program: "asciidoctor -b html5 -D outputs index.adoc"
 
     - name: Build datasheet
       uses: tonynv/asciidoctor-action@master
@@ -29,7 +29,7 @@ jobs:
         program: "asciidoctor -b html5 -r asciidoctor-diagram -r asciidoctor-kroki -D outputs/datasheet datasheet/index.adoc"
 
     - name: Copy resources
-      run: "mkdir -p outputs/resources/img && cp resources/img/*.svg outputs/resources/img/"
+      run: "sudo mkdir -p outputs/resources/img && sudo cp resources/img/*.svg outputs/resources/img/"
 
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
