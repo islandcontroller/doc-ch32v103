@@ -438,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article toc2 toc-left data-line-1">
+<body class="article toc2 toc-left">
 <div id="header">
 <h1>CH32V103: Datasheet</h1>
 <div class="details">
@@ -476,16 +476,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph data-line-8">
+<div class="paragraph">
 <p><em>RISC-V</em>-based 32-bit MCU with <code>RV32IMAC</code> core, 32 or 64kB FLASH, USBHD 2.0FS, 16-channel ADC w/ TouchKey, 7 timers, 8 com. interfaces</p>
 </div>
 <hr>
+<div class="paragraph text-right">
+<p><a href="../">Return to overview</a></p>
 </div>
 </div>
-<div class="sect1 data-line-0">
+</div>
+<div class="sect1">
 <h2 id="_features"><a class="anchor" href="#_features"></a>Features</h2>
 <div class="sectionbody">
-<table class="tableblock frame-none grid-none stretch data-line-2">
+<table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -683,24 +686,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 </div>
-<div class="sect1 data-line-1">
+<div class="sect1">
 <h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
 <div class="sectionbody">
-<div class="paragraph text-justify data-line-4">
+<div class="paragraph text-justify">
 <p>CH32V103 series series MCU incorporate a 32-bit <em>RISC-V</em> RISC-V3A core based on the <code>RV32IMAC</code> open-standard ISA, high-speed embedded memories (up to 64kB of FLASH memory and up to 20kB of SRAM) with instruction pre-fetch and a wide range of I/O and peripherals. All series parts feature a 12-bit ADC with TouchKey, one advanced 16-bit timer capable of motor control applications plus a minimum of two 16-bit general purpose timers, as well as a range of communication interfaces including SPI, I&sup2;C, 2 &times; USART and USBHD 2.0FS host and device functionality.</p>
 </div>
-<div class="paragraph text-justify data-line-7">
+<div class="paragraph text-justify">
 <p>The devices operate at a supply range of 2.7 to 5.5V, with a maximum core frequency of 80MHz. Core components and peripherals are interconnected via two APBs and one AHB, and clock supplies can be disabled and core power saving modes can be used for low-power applications. RTC and backup registers can be powered independently through a battery supply input. All series devices are capable of operating across the industrial grade temperature range between -40 and +85&deg;C, and are available in package sizes QFN48, LQFP48 and LQFP64.</p>
 </div>
-<div class="paragraph text-justify data-line-10">
+<div class="paragraph text-justify">
 <p>CH32V103 series devices are suitable for use in motor control applications, handheld equipment, PC peripheral devices and gaming peripherals, GPS platforms, PLCs, inverters, printers and scanners, video intercom systems and HVAC equipment.</p>
 </div>
-<div class="sect2 data-line-12">
+<div class="sect2">
 <h3 id="_device_overview"><a class="anchor" href="#_device_overview"></a>Device overview</h3>
-<div class="paragraph text-justify data-line-15">
+<div class="paragraph text-justify">
 <p>CH32V103 series devices are offered in three package variants spanning a set of four device models, each with a specific package, memory and peripherals configuration. All available configurations are shown in <a href="#model-comparison">Table 1</a>. The device internal block structure is shown in <a href="#system-diagram">Figure 1</a>.</p>
 </div>
-<table id="model-comparison" class="tableblock frame-all grid-all stretch data-line-5">
+<table id="model-comparison" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Model Comparison</caption>
 <colgroup>
 <col style="width: 16.6666%;">
@@ -833,76 +836,76 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
-<div id="system-diagram" class="imageblock text-center data-line-23">
+<div id="system-diagram" class="imageblock text-center">
 <div class="content">
 <img src="../resources/img/CH32V103_System_Diagram.svg" alt="CH32V103 System Diagram">
 </div>
 <div class="title">Figure 1. System Block Diagram</div>
 </div>
 </div>
-<div class="sect2 data-line-25">
+<div class="sect2">
 <h3 id="_systems_and_features_overview"><a class="anchor" href="#_systems_and_features_overview"></a>Systems and features overview</h3>
-<div class="sect3 data-line-27">
+<div class="sect3">
 <h4 id="_risc_v3a_core"><a class="anchor" href="#_risc_v3a_core"></a>RISC-V3A core</h4>
-<div class="paragraph text-justify data-line-29">
+<div class="paragraph text-justify">
 <p>The <em>RISC-V3A</em> is a 32-bit RISC processor core developed and maintained in-house at WCH. It implements the <code>RV32I</code> <em>RISC-V</em> base ISA with hardware multiplication and division (<code>M</code>), atomic memory access (<code>A</code>) and compressed instructions (<code>C</code>), as well as vendor-specific extensions. <em>Machine</em> and <em>User</em> privilege levels are supported. Debugging access is provided via a two-wire serial interface.</p>
 </div>
-<div class="ulist data-line-31">
+<div class="ulist">
 <ul>
-<li class="data-line-31">
+<li>
 <p><code>RV32IMAC</code> base ISA and extensions</p>
 </li>
-<li class="data-line-32">
+<li>
 <p>Low-power 2-stage pipeline with static branch prediction</p>
 </li>
-<li class="data-line-33">
+<li>
 <p>Instruction pre-fetch buffer</p>
 </li>
-<li class="data-line-34">
+<li>
 <p><em>Machine</em> and <em>User</em> privilege levels</p>
 </li>
-<li class="data-line-35">
+<li>
 <p>Programmable Fast Interrupt Controller (PFIC)</p>
 </li>
-<li class="data-line-36">
+<li>
 <p>Two-wire serial debugging interface</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect3 data-line-38">
+<div class="sect3">
 <h4 id="_embedded_flash_memory"><a class="anchor" href="#_embedded_flash_memory"></a>Embedded FLASH memory</h4>
 
 </div>
-<div class="sect3 data-line-40">
+<div class="sect3">
 <h4 id="_embedded_sram"><a class="anchor" href="#_embedded_sram"></a>Embedded SRAM</h4>
 
 </div>
-<div class="sect3 data-line-42">
+<div class="sect3">
 <h4 id="_crc_calculation_unit_crc"><a class="anchor" href="#_crc_calculation_unit_crc"></a>CRC calculation unit (CRC)</h4>
 
 </div>
-<div class="sect3 data-line-44">
+<div class="sect3">
 <h4 id="_programmable_fast_interrupt_controller_pfic"><a class="anchor" href="#_programmable_fast_interrupt_controller_pfic"></a>Programmable Fast Interrupt Controller (PFIC)</h4>
 
 </div>
-<div class="sect3 data-line-46">
+<div class="sect3">
 <h4 id="_external_interrupt_controller_exti"><a class="anchor" href="#_external_interrupt_controller_exti"></a>External Interrupt Controller (EXTI)</h4>
 
 </div>
-<div class="sect3 data-line-48">
+<div class="sect3">
 <h4 id="_clocks"><a class="anchor" href="#_clocks"></a>Clocks</h4>
 
 </div>
-<div class="sect3 data-line-50">
+<div class="sect3">
 <h4 id="_boot_modes"><a class="anchor" href="#_boot_modes"></a>Boot Modes</h4>
 
 </div>
-<div class="sect3 data-line-52">
+<div class="sect3">
 <h4 id="_power_supply_and_monitoring"><a class="anchor" href="#_power_supply_and_monitoring"></a>Power supply and monitoring</h4>
 
 </div>
-<div class="sect3 data-line-13">
+<div class="sect3">
 <h4 id="_low_power"><a class="anchor" href="#_low_power"></a>Low power</h4>
 
 </div>
