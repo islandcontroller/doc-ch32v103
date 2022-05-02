@@ -18,14 +18,15 @@ jobs:
     - name: Clone repository
       uses: actions/checkout@v2
 
-    - name: Prepare build container
-      uses: tonynv/asciidoctor-action@master
-
     - name: Build landing page
-      run: "asciidoctor -b html5 outputs index.adoc"
+      uses: tonynv/asciidoctor-action@master
+      with:
+        program: "asciidoctor -b html5 outputs index.adoc"
 
     - name: Build datasheet
-      run: "asciidoctor -b html5 -r asciidoctor-diagram -r asciidoctor-kroki -D outputs/datasheet datasheet/index.adoc"
+      uses: tonynv/asciidoctor-action@master
+      with:
+        program: "asciidoctor -b html5 -r asciidoctor-diagram -r asciidoctor-kroki -D outputs/datasheet datasheet/index.adoc"
 
     - name: Copy resources
       run: "mkdir -p outputs/resources/img && cp resources/img/*.svg outputs/resources/img/"
