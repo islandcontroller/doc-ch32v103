@@ -12,16 +12,33 @@ The _RISC-V3A_ is a 32-bit RISC processor core developed and maintained in-house
 * Two-wire serial debugging interface
 
 ==== Embedded FLASH memory
+[.text-justify]
+Depending on model selection (see <<model-comparison>>), either 32kB or 64kB of embedded FLASH memory are available for code and read-only data storage. Higher AHB clock speeds may require additional access wait-states.
+
+128 Bytes of persistent, application-defined data can be stored in a separate user configuratioin word.
 
 ==== Embedded SRAM
+[.text-justify]
+Up to 20kB of embedded SRAM are available for data and code storage, and can be accessed (read/write) at AHB clock speed without wait-states. Available memory is limited on smaller devices, as shown in <<model-comparison>>.
 
 ==== CRC calculation unit (CRC)
+[.text-justify]
+The CRC unit can be used to calculate a CRC value from 32-bit data words and a fixed generator polynomial (CRC-32, `0x04C11DB7`). It can be utilised to verify the integrity of FLASH-memory contents against a known-good signature.
 
 ==== Programmable Fast Interrupt Controller (PFIC)
+[.text-justify]
+Incoming peripheral and core interrupt requests are managed by the built-in programmable fast interrupt controller, capable of handling 47 maskable interrupt channels and 16 priority levels.
 
-==== External Interrupt Controller (EXTI)
+* 44 peripheral + 3 core maskable interrupts
+* Non-maskable core interrupt (NMI)
+* Hardware stack management on interrupt entry and exit up to 2-level nesting
+* Support for tail-chaining
 
-==== Clocks
+==== External Interrupt/Event Controller (EXTI)
+[.text-justify]
+The external interrupt/event controller contains 20 edge detectors for generating interrupt/event requests. Each interrupt can be masked and configured to select the trigger event independently. Interrupt requests are latched in a pending register. External request lines support pulse widths shorter than the APB2 clock period. Up to 51 general-purpose I/Os can be connected to the 16 external interrupt lines.
+
+==== Clocks and Startup
 
 ==== Boot Modes
 
