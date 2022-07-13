@@ -47,6 +47,18 @@ A clock monitoring system (CSS) can be enabled for HSE derived system clock. In 
 High-speed and peripheral bus clock frequencies can be configured via a number of prescalers; see <<clock-tree>> for further details on the clock distribution tree.
 
 ==== Boot Modes
+[.text-justify]
+The boot mode is set via two input pins `BOOT0` and `BOOT1`, and is latched at reset (reset event or power-on reset). See <<boot-mode-selection>> for valid startup configurations.
+
+[#boot-mode-selection]
+.Boot Mode Selection
+include::{tablesdir}/boot-modes.adoc[]
+
+Depending on the selected mode, different memories will be remapped to address `0x00000000`:
+
+* When startup from main program FLASH is selected, the FLASH memory starting at `0x08000000` will be remapped.
+* When startup from System Memory is selected, the read-only FLASH memory starting at `0x1FFF0000` will be remapped.
+* When startup from embedded SRAM is selected, *the memory will not be remapped*. Embedded SRAM can only be addressed directly starting at `0x20000000`. 
 
 ==== Power supply and monitoring
 

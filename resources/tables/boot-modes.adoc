@@ -1,0 +1,8 @@
+[%header]
+[cols="^1,^1,3"]
+|===
+| BOOT0 | BOOT1 | Mode Description
+| 0     | X     | Startup from main program FLASH memory 
+| 1     | 0     | Startup from System Memory
+| 1     | 1     | Startup from embedded SRAM
+|===
