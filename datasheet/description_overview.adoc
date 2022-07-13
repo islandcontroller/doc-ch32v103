@@ -1,12 +1,19 @@
 === Device overview
 
 [.text-justify]
-CH32V103 series devices are offered in three package variants spanning a set of four device models, each with a specific package, memory and peripherals configuration. All available configurations are shown in <<model-comparison>>. The device internal block structure is shown in <<system-diagram>>.
+CH32V103 series devices are offered in three package variants spanning a set of four device models, each with a specific package, memory and peripherals configuration. All available configurations are shown in <<model-comparison>>. The device internal block structure is shown in <<system-diagram>> and a more detailed clock distribution tree is shown in <<clock-tree>>.
 
 [#model-comparison]
+==== Model Comparison
 .Model Comparison
 include::{tablesdir}/model-comparison.adoc[]
 
 [#system-diagram]
+==== System Block Diagram
 .System Block Diagram
 image::CH32V103_System_Diagram.svg[align=center]
+
+[#clock-tree]
+==== Clock Tree
+.Clock Tree
+image::CH32V103_Clock_Tree.svg[align=center]
