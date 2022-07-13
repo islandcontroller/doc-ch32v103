@@ -958,7 +958,57 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect3">
 <h4 id="_boot_modes"><a class="anchor" href="#_boot_modes"></a>Boot Modes</h4>
-
+<div class="paragraph text-justify">
+<p>The boot mode is set via two input pins <code>BOOT0</code> and <code>BOOT1</code>, and is latched at reset (reset event or power-on reset). See <a href="#boot-mode-selection">Table 2</a> for valid startup configurations.</p>
+</div>
+<table id="boot-mode-selection" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Boot Mode Selection</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">BOOT0</th>
+<th class="tableblock halign-center valign-top">BOOT1</th>
+<th class="tableblock halign-left valign-top">Mode Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Startup from main program FLASH memory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Startup from System Memory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Startup from embedded SRAM</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Depending on the selected mode, different memories will be remapped to address <code>0x00000000</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When startup from main program FLASH is selected, the FLASH memory starting at <code>0x08000000</code> will be remapped.</p>
+</li>
+<li>
+<p>When startup from System Memory is selected, the read-only FLASH memory starting at <code>0x1FFF0000</code> will be remapped.</p>
+</li>
+<li>
+<p>When startup from embedded SRAM is selected, <strong>the memory will not be remapped</strong>. Embedded SRAM can only be addressed directly starting at <code>0x20000000</code>.</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_power_supply_and_monitoring"><a class="anchor" href="#_power_supply_and_monitoring"></a>Power supply and monitoring</h4>
