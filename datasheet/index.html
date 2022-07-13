@@ -453,7 +453,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_features">Features</a></li>
 <li><a href="#_description">Description</a>
 <ul class="sectlevel2">
-<li><a href="#_device_overview">Device overview</a></li>
+<li><a href="#_device_overview">Device overview</a>
+<ul class="sectlevel3">
+<li><a href="#model-comparison">Model Comparison</a></li>
+<li><a href="#system-diagram">System Block Diagram</a></li>
+<li><a href="#clock-tree">Clock Tree</a></li>
+</ul>
+</li>
 <li><a href="#_systems_and_features_overview">Systems and features overview</a>
 <ul class="sectlevel3">
 <li><a href="#_risc_v3a_core">RISC-V3A core</a></li>
@@ -702,9 +708,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_device_overview"><a class="anchor" href="#_device_overview"></a>Device overview</h3>
 <div class="paragraph text-justify">
-<p>CH32V103 series devices are offered in three package variants spanning a set of four device models, each with a specific package, memory and peripherals configuration. All available configurations are shown in <a href="#model-comparison">Table 1</a>. The device internal block structure is shown in <a href="#system-diagram">Figure 1</a>.</p>
+<p>CH32V103 series devices are offered in three package variants spanning a set of four device models, each with a specific package, memory and peripherals configuration. All available configurations are shown in <a href="#model-comparison">Model Comparison</a>. The device internal block structure is shown in <a href="#system-diagram">System Block Diagram</a> and a more detailed clock distribution tree is shown in <a href="#clock-tree">Clock Tree</a>.</p>
 </div>
-<table id="model-comparison" class="tableblock frame-all grid-all stretch">
+<div class="sect3">
+<h4 id="model-comparison"><a class="anchor" href="#model-comparison"></a>Model Comparison</h4>
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Model Comparison</caption>
 <colgroup>
 <col style="width: 16.6666%;">
@@ -837,11 +845,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
-<div id="system-diagram" class="imageblock text-center">
+</div>
+<div class="sect3">
+<h4 id="system-diagram"><a class="anchor" href="#system-diagram"></a>System Block Diagram</h4>
+<div class="imageblock text-center">
 <div class="content">
 <img src="../resources/img/CH32V103_System_Diagram.svg" alt="CH32V103 System Diagram">
 </div>
 <div class="title">Figure 1. System Block Diagram</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="clock-tree"><a class="anchor" href="#clock-tree"></a>Clock Tree</h4>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../resources/img/CH32V103_Clock_Tree.svg" alt="CH32V103 Clock Tree">
+</div>
+<div class="title">Figure 2. Clock Tree</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -877,7 +898,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_embedded_flash_memory"><a class="anchor" href="#_embedded_flash_memory"></a>Embedded FLASH memory</h4>
 <div class="paragraph text-justify">
-<p>Depending on model selection (see <a href="#model-comparison">Table 1</a>), either 32kB or 64kB of embedded FLASH memory are available for code and read-only data storage. Higher AHB clock speeds may require additional access wait-states.</p>
+<p>Depending on model selection (see <a href="#model-comparison">Model Comparison</a>), either 32kB or 64kB of embedded FLASH memory are available for code and read-only data storage. Higher AHB clock speeds may require additional access wait-states.</p>
 </div>
 <div class="paragraph">
 <p>128 Bytes of persistent, application-defined data can be stored in a separate user configuratioin word.</p>
@@ -886,7 +907,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_embedded_sram"><a class="anchor" href="#_embedded_sram"></a>Embedded SRAM</h4>
 <div class="paragraph text-justify">
-<p>Up to 20kB of embedded SRAM are available for data and code storage, and can be accessed (read/write) at AHB clock speed without wait-states. Available memory is limited on smaller devices, as shown in <a href="#model-comparison">Table 1</a>.</p>
+<p>Up to 20kB of embedded SRAM are available for data and code storage, and can be accessed (read/write) at AHB clock speed without wait-states. Available memory is limited on smaller devices, as shown in <a href="#model-comparison">Model Comparison</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -925,7 +946,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect3">
 <h4 id="_clocks_and_startup"><a class="anchor" href="#_clocks_and_startup"></a>Clocks and Startup</h4>
-
+<div class="paragraph text-justify">
+<p>At powerup, the internal 8 MHz RC oscillator (HSI) is enabled automatically, and selected as the CPU core clock after reset or if no other clocks are configured. Afterwards, an external clock source (HSE) or PLL can be configured.</p>
+</div>
+<div class="paragraph">
+<p>A clock monitoring system (CSS) can be enabled for HSE derived system clock. In case the external clock is determined to have failed, the CSS automatically will automatically revert the system clock configuration to HSI, and disable any active HSE or PLL. The CSS will also automatically switch the clock configuration to HSI after wake-up from a low-power mode. Failure detection will also trigger the <em>non-maskable interrupt</em> (NMI).</p>
+</div>
+<div class="paragraph">
+<p>High-speed and peripheral bus clock frequencies can be configured via a number of prescalers; see <a href="#clock-tree">Clock Tree</a> for further details on the clock distribution tree.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_boot_modes"><a class="anchor" href="#_boot_modes"></a>Boot Modes</h4>
@@ -949,19 +978,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="../resources/img/CH32V103_Pinout_LQFP48.svg" alt="CH32V103 Pinout LQFP48">
 </div>
-<div class="title">Figure 2. CH32V103CxT6 (LQFP48) pinout</div>
+<div class="title">Figure 3. CH32V103CxT6 (LQFP48) pinout</div>
 </div>
 <div id="pinout-qfn48" class="imageblock text-center">
 <div class="content">
 <img src="../resources/img/CH32V103_Pinout_QFN48.svg" alt="CH32V103 Pinout QFN48">
 </div>
-<div class="title">Figure 3. CH32V103C8U6 (QFN48) pinout</div>
+<div class="title">Figure 4. CH32V103C8U6 (QFN48) pinout</div>
 </div>
 <div id="pinout-lqfp64" class="imageblock text-center">
 <div class="content">
 <img src="../resources/img/CH32V103_Pinout_LQFP64.svg" alt="CH32V103 Pinout LQFP64">
 </div>
-<div class="title">Figure 4. CH32V103R8T6 (LQFP64M) pinout</div>
+<div class="title">Figure 5. CH32V103R8T6 (LQFP64M) pinout</div>
 </div>
 </div>
 </div>
