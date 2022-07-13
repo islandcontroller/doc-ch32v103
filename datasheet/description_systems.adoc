@@ -39,6 +39,12 @@ Incoming peripheral and core interrupt requests are managed by the built-in prog
 The external interrupt/event controller contains 20 edge detectors for generating interrupt/event requests. Each interrupt can be masked and configured to select the trigger event independently. Interrupt requests are latched in a pending register. External request lines support pulse widths shorter than the APB2 clock period. Up to 51 general-purpose I/Os can be connected to the 16 external interrupt lines.
 
 ==== Clocks and Startup
+[.text-justify]
+At powerup, the internal 8 MHz RC oscillator (HSI) is enabled automatically, and selected as the CPU core clock after reset or if no other clocks are configured. Afterwards, an external clock source (HSE) or PLL can be configured. 
+
+A clock monitoring system (CSS) can be enabled for HSE derived system clock. In case the external clock is determined to have failed, the CSS automatically will automatically revert the system clock configuration to HSI, and disable any active HSE or PLL. The CSS will also automatically switch the clock configuration to HSI after wake-up from a low-power mode. Failure detection will also trigger the _non-maskable interrupt_ (NMI).
+
+High-speed and peripheral bus clock frequencies can be configured via a number of prescalers; see <<clock-tree>> for further details on the clock distribution tree.
 
 ==== Boot Modes
 
