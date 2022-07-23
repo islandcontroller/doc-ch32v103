@@ -1,2 +1,4 @@
+ifeval::["{build-type}" != "pdf"]
 == Features
+endif::[]
 include::{tablesdir}/features.adoc[]

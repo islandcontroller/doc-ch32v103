@@ -10,7 +10,7 @@
 ifeval::["{build-type}" == "pdf"]
 :doctype: book
 :!nofooter:
-:toc:
+:toc: macro
 :pdf-theme: print-theme.yml
 endif::[]
 

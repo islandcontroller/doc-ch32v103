@@ -14,5 +14,8 @@ link:../[Return to overview]
 endif::[]
 
 include::features.adoc[]
+ifeval::["{build-type}" == "pdf"]
+toc::[]
+endif::[]
 include::description.adoc[]
 include::pinouts.adoc[]

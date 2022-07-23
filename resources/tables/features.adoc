@@ -1,6 +1,9 @@
 [cols="1a,1a",frame=none,grid=none]
 |===
 |
+ifeval::["{build-type}" == "pdf"]
+== Features
+endif::[]
 * WCH 32-bit RISC-V3A Core
     - `RV32IMAC` base ISA and extensions
     - 80MHz maximum operating frequency
