@@ -1,0 +1,8 @@
+extends: default
+
+page:
+  initial_zoom: FitV
+image:
+  align: center
+footer:
+  start-at: toc

@@ -7,6 +7,13 @@
 :nofooter:
 :xrefstyle: short
 
+ifeval::["{build-type}" == "pdf"]
+:doctype: book
+:!nofooter:
+:toc:
+:pdf-theme: print-theme.yml
+endif::[]
+
 :ref-name: none
 :commit-sha: unknown
 :release-type: preview
