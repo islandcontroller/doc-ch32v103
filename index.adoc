@@ -14,7 +14,7 @@ _Unofficial documentation resources for WCH's CH32V103 RISC-V microcontroller_
 | *Datasheet*
 | `CH32V103DS`
 | link:datasheet/[HTML]
-| PDF
+| link:ch32v103_ds.pdf[PDF]
 
 | *Reference Manual*
 | `CH32V103RM`

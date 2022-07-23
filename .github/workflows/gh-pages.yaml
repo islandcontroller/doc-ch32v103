@@ -29,10 +29,20 @@ jobs:
       with:
         program: "asciidoctor -b html5 -D outputs index.adoc"
 
-    - name: Build datasheet
+    - name: Build HTML datasheet
       uses: tonynv/asciidoctor-action@master
       with:
         program: "asciidoctor -b html5 -r asciidoctor-diagram -r asciidoctor-kroki -D outputs/datasheet datasheet/index.adoc"
+
+    - name: Prepare PDF build
+      run: |
+        find */* -type f -name "*.adoc" -exec sed -i 's/&commat;/@/g; s/&deg;/°/g; s/&lowbar;/_/g; s/&sup2;/²/g; s/&times;/×/g' {} +
+        find */* -type f -name "*.adoc" -exec sed -i 's/.svg/.png/g;' {} +
+        
+    - name: Build PDF datasheet
+      uses: tonynv/asciidoctor-action@master
+      with:
+        program: "asciidoctor-pdf -a build-type=pdf -r asciidoctor-diagram -r asciidoctor-kroki -D outputs/ -o ch32v103_ds.pdf datasheet/index.adoc"
 
     - name: Copy resources
       run: "sudo mkdir -p outputs/resources/img && sudo cp resources/img/*.svg outputs/resources/img/"
