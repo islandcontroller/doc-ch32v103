@@ -1,12 +1,12 @@
 == Pinouts and Pin Description
 [#pinout-lqfp48]
 .CH32V103CxT6 (LQFP48) pinout
-image::CH32V103_Pinout_LQFP48.svg[align=center]
+image::CH32V103_Pinout_LQFP48.svg[align=center,pdfwidth=60%]
 
 [#pinout-qfn48]
 .CH32V103C8U6 (QFN48) pinout
-image::CH32V103_Pinout_QFN48.svg[align=center]
+image::CH32V103_Pinout_QFN48.svg[align=center,pdfwidth=50%]
 
 [#pinout-lqfp64]
 .CH32V103R8T6 (LQFP64M) pinout
-image::CH32V103_Pinout_LQFP64.svg[align=center]
+image::CH32V103_Pinout_LQFP64.svg[align=center,pdfwidth=70%]
