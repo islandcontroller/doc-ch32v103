@@ -6,3 +6,11 @@
 :icons: font
 :nofooter:
 :xrefstyle: short
+
+:ref-name: none
+:commit-sha: unknown
+:release-type: preview
+
+include::version.adoc[]
+
+:revnumber: {ref-name}-{commit-sha}-{release-type}

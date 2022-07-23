@@ -1,7 +1,7 @@
+include::attrs.adoc[]
+
 = CH32V103: Documentation
 WCH; &commat;islandc&lowbar;;
-:revremark: development
-:revnumber: 0.1
 :nofooter:
 
 _Unofficial documentation resources for WCH's CH32V103 RISC-V microcontroller_

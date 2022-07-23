@@ -18,6 +18,12 @@ jobs:
     - name: Clone repository
       uses: actions/checkout@v2
 
+    - name: Prepare version information file
+      run: |
+        echo ":release-type: `if [ "${{ github.ref_type }}" == "tag" ]; then echo "release"; else echo "preview"; fi`" > version.adoc
+        echo ":ref-name: ${{ github.ref_name }}" >> version.adoc
+        echo ":commit-sha: `echo ${{ github.sha }} | cut -c1-7`" >> version.adoc
+
     - name: Build landing page
       uses: tonynv/asciidoctor-action@master
       with:

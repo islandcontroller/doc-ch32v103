@@ -2,8 +2,6 @@ include::../attrs.adoc[]
 
 = CH32V103: Datasheet
 WCH; &commat;islandc&lowbar;;
-:revremark: production
-:revnumber: 1.0
 
 _RISC-V_-based 32-bit MCU with `RV32IMAC` core, 32 or 64kB FLASH, USBHD 2.0FS, 16-channel ADC w/ TouchKey, 7 timers, 8 com. interfaces
 
