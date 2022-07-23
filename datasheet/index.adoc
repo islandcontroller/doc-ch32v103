@@ -1,4 +1,5 @@
 include::../attrs.adoc[]
+ifndef::pdf-name[:pdf-name: ch32v103_ds]
 
 = CH32V103: Datasheet
 WCH; &commat;islandc&lowbar;;

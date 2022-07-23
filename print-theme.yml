@@ -29,9 +29,9 @@ footer:
   border-width: 0.2mm
   recto:
     left:
-      content: '{revnumber}'
+      content: '{pdf-name} Version {revnumber}'
     right:
-      content: '{page-number}'
+      content: 'Page {page-number} of {page-count}'
   verso:
     left:
       content: $footer_recto_right_content
