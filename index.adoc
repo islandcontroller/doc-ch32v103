@@ -22,6 +22,24 @@ _Unofficial documentation resources for WCH's CH32V103 RISC-V microcontroller_
 | PDF
 |===
 
+.Software Packages
+[.center,cols="2,3,^1",grid=rows,width=75]
+|===
+| *MCULib Controller Library*
+| `islandcontroller/mculib-controller-ch32v103`
+| link:https://github.com/islandcontroller/mculib-controller-ch32v103[GitHub]
+|===
+
+.Hardware Evaluation Kits
+[.center,cols="4,^2",grid=rows,width=75]
+|===
+| *WCH* `CH32V103R8T6-EVT-R1`
+| link:https://lcsc.com/product-detail/Development-Boards-Kits_WCH-Jiangsu-Qin-Heng-CH32V103R8T6-EVT-R1_C2943982.html[LCSC PN#`C2943982`]
+
+| *WCH* `CH32V103C8T6-EVT-R1`
+| link:https://lcsc.com/product-detail/Development-Boards-Kits_WCH-Jiangsu-Qin-Heng-CH32V103C8T6-EVT-R1_C2943983.html[LCSC PN#`C2943983`]
+|===
+
 .Other Resources
 [.center,cols="2,3,^1",grid=rows,width=75]
 |===
