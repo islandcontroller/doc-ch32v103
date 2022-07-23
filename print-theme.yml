@@ -2,7 +2,38 @@ extends: default
 
 page:
   initial_zoom: FitV
+  margin: [25mm, 20mm, 18mm, 18mm]
 image:
   align: center
+header:
+  height: 15mm
+  vertical-align: bottom
+  font-size: 9
+  border-color: 000000
+  border-width: 0.2mm
+  recto:
+    left:
+      content: '*{doctitle}*'
+    right:
+      content: '*{section-or-chapter-title}*'
+  verso:
+    left:
+      content: $header_recto_right_content
+    right:
+      content: $header_recto_left_content
 footer:
   start-at: toc
+  height: 15mm
+  font-size: 9
+  border-color: 000000
+  border-width: 0.2mm
+  recto:
+    left:
+      content: '{revnumber}'
+    right:
+      content: '{page-number}'
+  verso:
+    left:
+      content: $footer_recto_right_content
+    right:
+      content: $footer_recto_left_content

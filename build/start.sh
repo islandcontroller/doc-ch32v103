@@ -1,0 +1,1 @@
+docker run --rm -p 9080:80 -v ${PWD}/outputs/:/usr/share/nginx/html:ro nginx:alpine
